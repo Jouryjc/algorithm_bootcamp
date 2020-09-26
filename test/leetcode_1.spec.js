@@ -1,4 +1,4 @@
-const { twoSum } = require('../src/two_sum');
+const { twoSum } = require('../src/leetcode_1');
 
 describe('两数之和', () => {
     test('leetcode示例测试', () => {
