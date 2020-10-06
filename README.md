@@ -4,3 +4,4 @@
 - [leetcode1](https://leetcode-cn.com/problems/two-sum/)
 - [leetcode106](https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
 - [leetcode2](https://leetcode-cn.com/problems/add-two-numbers/)
+- [leetcode20](https://leetcode-cn.com/problems/valid-parentheses/)
