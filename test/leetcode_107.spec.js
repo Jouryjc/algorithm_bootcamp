@@ -1,6 +1,6 @@
 const { TreeNode, levelOrderBottom } = require('../src/leetcode_107');
 
-describe('二叉树的最大深度', () => {
+describe('二叉树的层次遍历', () => {
     test('leetcode示例样式', () => {
         const root = new TreeNode(3);
         root.left = new TreeNode(9);
