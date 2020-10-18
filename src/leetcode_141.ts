@@ -10,6 +10,8 @@
  * }
  */
 
+import { TreeNode } from "./leetcode_104";
+
 export class ListNode {
     val: number
     next: ListNode | null
@@ -20,16 +22,33 @@ export class ListNode {
 }
 
 export function hasCycle(head: ListNode | null): boolean {
-    if (!head) {
-        return false;
-    }
     
-    const map = new Map();
-    while (head) {
-        if (!map.has(head)) {
-            map.set(head, true);
-            head = head.next;
-        } else {
+    /**
+     * map标记法，如果有重复的节点，就返回true，否则返回false
+     */
+    // const map = new Map();
+    // while (head) {
+    //     if (!map.has(head)) {
+    //         map.set(head, true);
+    //         head = head.next;
+    //     } else {
+    //         return true;
+    //     }
+    // }
+
+    // return false;
+
+    /**
+     * 快、慢指针
+     */
+    let quick = head;
+    let slow = head;
+
+    while (slow && quick && quick.next) {
+        slow = slow.next;
+        quick = quick.next.next;
+
+        if (slow === quick) {
             return true;
         }
     }
