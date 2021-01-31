@@ -1,6 +1,7 @@
 const { bubbleSort, optimizedBubbleSort } = require('../../src/sort/bubble');
 const { selectionSort } = require('../../src/sort/selection');
 const { insertionSort } = require('../../src/sort/insertion');
+const { mergeSort } = require('../../src/sort/merge');
 
 describe('排序算法测试', () => {
   test('冒泡排序', () => {
@@ -14,5 +15,9 @@ describe('排序算法测试', () => {
 
   test('插入排序', () => {
     expect(insertionSort([10, 2, 1, 5, 7, 3, 6, 3])).toEqual([1, 2, 3, 3, 5, 6, 7, 10]);
+  });
+
+  test('归并排序', () => {
+    expect(mergeSort([10, 2, 1, 5, 7, 3, 6, 3])).toEqual([1, 2, 3, 3, 5, 6, 7, 10]);
   });
 })
