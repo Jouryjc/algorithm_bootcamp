@@ -5,7 +5,6 @@
  * 选择一项作为基准，
  */
 
-import { start } from 'repl'
 
 export function quickSort(arr: number[]): number[] | undefined {
   return exceedQuickSort(arr, 0, arr.length - 1)
@@ -93,7 +92,7 @@ function partition(arr: number[], startIndex: number, endIndex: number): number 
     }
   }
 
-  ;[arr[startIndex], arr[mark]] = [arr[mark], pivot]
+  [arr[startIndex], arr[mark]] = [arr[mark], pivot]
 
   return mark
 }
