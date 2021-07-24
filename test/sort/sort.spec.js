@@ -5,6 +5,7 @@ const { mergeSort } = require('../../src/sort/merge');
 const { quickSort } = require('../../src/sort/quick');
 const { heapSort } = require('../../src/sort/heap');
 const { shellSort } = require('../../src/sort/shell');
+const { countingSort } = require('../../src/sort/count');
 
 describe('排序算法测试', () => {
   test('冒泡排序', () => {
@@ -34,5 +35,9 @@ describe('排序算法测试', () => {
 
     test('希尔排序', () => {
         expect(shellSort([10, 2, 1, 5, 7, 3, 6, 3])).toEqual([1, 2, 3, 3, 5, 6, 7, 10]);
-    })
+    });
+
+    test('计数排序', () => {
+        expect(countingSort([10, 2, 1, 5, 7, 3, 6, 3])).toEqual([1, 2, 3, 3, 5, 6, 7, 10]);
+    });
 })
