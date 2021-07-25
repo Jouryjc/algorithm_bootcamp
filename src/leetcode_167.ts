@@ -39,12 +39,31 @@ export function twoSum(numbers: number[], target: number): number[] {
   // return [0, 0];
 
   // 二分查找
-  for (let i = 0; i < len; i++) {
-    let secondVal = target - numbers[i]
-    let secondIndex = binarySearch(numbers.slice(i + 1), secondVal)
+  //   for (let i = 0; i < len; i++) {
+  //     let secondVal = target - numbers[i]
+  //     let secondIndex = binarySearch(numbers.slice(i + 1), secondVal)
 
-    if (secondIndex !== -1) {
-      return [++i, ++secondIndex + i]
+  //     if (secondIndex !== -1) {
+  //       return [++i, ++secondIndex + i]
+  //     }
+  //   }
+
+  //   return [-1, -1]
+
+  // 双指针解法，第一个元素和最后一个元素
+  // 如果相加＜target，左+1
+  // 如果相加 > target，右-1
+  let start = 0
+  let end = len - 1
+
+  while (start <= end) {
+    let sum = numbers[start] + numbers[end]
+    if (sum > target) {
+      end--
+    } else if (sum < target) {
+      start++
+    } else {
+      return [++start, ++end]
     }
   }
 
