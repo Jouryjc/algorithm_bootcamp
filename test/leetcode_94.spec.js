@@ -1,4 +1,4 @@
-const { TreeNode, inorderTraversal } = require('../src/leetcode_94')
+const { TreeNode, inorderTraversal } = require('../src/tree/leetcode_94')
 
 describe('leetcode 94', () => {
   test('[1,null,2,3]', () => {

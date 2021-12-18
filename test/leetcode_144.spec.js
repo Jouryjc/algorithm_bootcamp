@@ -1,4 +1,4 @@
-const { preorderTraversal, TreeNode } = require('../src/leetcode_144')
+const { preorderTraversal, TreeNode } = require('../src/tree/leetcode_144')
 
 describe('前序遍历', () => {
   test('[1,null,2,3]', () => {
