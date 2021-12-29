@@ -1,4 +1,4 @@
-const { TreeNode, isSymmetric } = require('../src/leetcode_101');
+const { TreeNode, isSymmetric } = require('../src/tree/leetcode_101');
 
 describe('对称二叉树', () => {
     test('成功示例测试', () => {
